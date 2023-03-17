@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+-Tag is for building the copyright watermark for our website. (Loginpage) its used in the page using <Copyright /> tag in jsx.
+-First box is for the entire signup screen and second box is for the form.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Notes for the real-time crypto-graph:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. ws variable is used as a useRef hook to create a persistant websocket object
 
-### `npm run build`
+2. url - a base URL for the Api
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. first- another useRef hook to prevent an initial render
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. websocket protocol can be found at: https://docs.cloud.coinbase.com/advanced-trade-api/docs/ws-overview
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. API key:
 
-### `npm run eject`
+6. The empty array passed as the 2nd argument to useEffect is crucial. This causes the effect hook to only run on the initial render. This is known as the dependency array.  useEffect(()=>{},[]) 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+7. The error message you are seeing is indicating that the sort() method expects a value to be returned at the end of the comparison function that you are passing to it. In your code, the sort() method is not returning a value in all cases, which is causing the error message.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To fix this error, you can modify your filtered array sorting code to ensure that a value is always returned. One way to do this is to add an else statement that returns 1 if the comparison condition is not met:
+ 
+ let filtered = pairs.filter((pair) => {
+  if (pair.quote_currency === "INR") {
+    return pair;
+  } else {
+    return 1;
+  }
+}).sort((a, b) => {
+  if (a.base_currency < b.base_currency) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+In this updated code, the else statement returns 1 if the currency is not INR, ensuring that a value is always returned for the filter() method. Similarly, the else statement in the sort() method ensures that a value is always returned for the comparison function.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+8. the Dashboard.js conatins the chart that will display data. Its  called in market page as <Dashboard/>
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+9. use backticks for defining url template string. second useEffect.

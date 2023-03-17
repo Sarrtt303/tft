@@ -1,11 +1,13 @@
 header {
-    background-color: #222;
-    color: #fff;
+    
+    color: #000000;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     height: 70px;
+    background: #DCDCDA;
+    box-shadow: 0px 48px 57px -45px rgba(0, 0, 0, 0.25);
   }
   
   .header-container {
@@ -20,40 +22,55 @@ header {
   .logo-container {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
   }
   
   .logo-container img {
-    height: 50px;
+    height: 30px;
     margin-right: 10px;
   }
   
   .site-name {
-    font-size: 28px;
-    margin: 0;
-    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+    color: #000000;
     font-weight: bold;
   }
   
-  nav ul {
+  .navbar ul {
     list-style: none;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
-    justify-content: flex-end;
+    
   }
   
-  nav li {
+  .navbar li {
     margin: 0 10px;
   }
   
-  nav li a {
-    color: #fff;
+  .navbar li a {
+    color: #000000 ;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
+
   }
   
-  nav li a:hover {
+  .navbar li a:hover {
     text-decoration: underline;
+  }
+  .login-register {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .login-register li {
+    margin-left: 10px;
+  }
+  
+  .login-register li:first-child {
+    margin-left: 0;
   }
   

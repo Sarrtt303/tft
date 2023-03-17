@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Header.css";
-import tft from "/images/tft.png";
+import tft from "./images/tft.png";
 
 function Header() {
   return (
@@ -25,12 +25,14 @@ function Header() {
           <li>
             <Link to="/feed">Feed</Link>
           </li>
-          <li>
-            <Link to="/login">login</Link>
-          </li>
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
+          <div className='login-register'>
+              <li>
+                <Link to="/login">login</Link>
+              </li>
+               <li>
+                <Link to="/register">Register</Link>
+              </li>
+          </div>
         </ul>
       </nav>
       </div>

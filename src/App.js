@@ -6,8 +6,9 @@ import HomePage from './pages/HomePage';
 import MarketPage from './pages/MarketPage';
 import LoanPage from './pages/LoanPage';
 import FeedPage from './pages/FeedPage';
-import LoginPage from './pages/LoginPage';
+import LoginPage from './pages/LoginPage.js';
 import RegisterPage from './pages/RegisterPage';
+
 
 function App() {
   return (
@@ -16,22 +17,18 @@ function App() {
         <Header/>
         <Routes>
           <Route path="/" element={<HomePage/> }> </Route>
-        </Routes>
-        <Routes>
-          <Route path="/market" element={<MarketPage/>  }> </Route>
-        </Routes>
-        <Routes>
+        
+          <Route path="/market" element={<MarketPage/>}  component={MarketPage}>  </Route>
+        
           <Route path="/loans" element={<LoanPage/>}>  </Route>
-        </Routes>
-        <Routes>
+        
           <Route path="/feed" element={<FeedPage/> }>  </Route>
-        </Routes>
-        <Routes>
-          <Route path="/login" element={<LoginPage/> }>  </Route>
-        </Routes>
-        <Routes>
+        
+          <Route path="/login" element={<LoginPage/> } component={LoginPage}>  </Route>
+        
           <Route path="/register" element={<RegisterPage/> }>  </Route>
         </Routes>
+        
 
     </div>    
     </Router>
