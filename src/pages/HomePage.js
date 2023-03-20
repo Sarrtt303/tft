@@ -9,6 +9,8 @@ import p2p from "../components/images/p2p.png";
 import potfobuild  from "../components/images/potfobuild.png";
 import scanpaygo from "../components/images/scanpaygo.png";
 import {Link} from "react-router-dom";
+import "../components/footer.css";
+import logo from "../components/images/logo-transparent.png";
 
 
 const HomePage = () => {
@@ -82,12 +84,8 @@ const HomePage = () => {
           <img src={btc3} alt="btc3" className="image"></img>
           </div>
           
-          <footer style={{ backgroundColor: '#f2f2f2', padding: '1rem' }}>
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-        <p style={{ margin: 0 }}>Copyright © 2023</p>
-      </div>
-    </footer>
-    <Link to="p2p">
+          
+          <Link to="p2p">
           <img src={p2p} alt="p2p"></img>
           </Link>
           <Link to="p2p">
@@ -96,6 +94,66 @@ const HomePage = () => {
           <Link to="p2p">
           <img src={scanpaygo} alt="p2p"></img>
           </Link>
+
+
+           
+
+            
+
+
+
+
+
+          <footer style={{ backgroundColor: '#f2f2f2', padding: '1rem' }}>
+            <div className="footer-container">
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                 <img src={logo} alt="logo-transparent"></img>
+                 <div class="footer-column">
+                     <h3>About us</h3>
+                     <ul>
+                        <li><a href="#">Sub-topic 1.1</a></li>
+                        <li><a href="#">Sub-topic 1.2</a></li>
+                        <li><a href="#">Sub-topic 1.3</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-column">
+                     <h3>service</h3>
+                     <ul>
+                        <li><a href="#">Sub-topic 1.1</a></li>
+                        <li><a href="#">Sub-topic 1.2</a></li>
+                        <li><a href="#">Sub-topic 1.3</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-column">
+                     <h3>support</h3>
+                     <ul>
+                        <li><a href="#">Sub-topic 1.1</a></li>
+                        <li><a href="#">Sub-topic 1.2</a></li>
+                        <li><a href="#">Sub-topic 1.3</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-column">
+                     <h3>Community</h3>
+                     <ul>
+                        <li><a href="#">Sub-topic 1.1</a></li>
+                        <li><a href="#">Sub-topic 1.2</a></li>
+                        <li><a href="#">Sub-topic 1.3</a></li>
+                     </ul>
+                  </div>
+                  <div class="footer-column">
+                     <h3>products</h3>
+                     <ul>
+                        <li><a href="#">Sub-topic 1.1</a></li>
+                        <li><a href="#">Sub-topic 1.2</a></li>
+                        <li><a href="#">Sub-topic 1.3</a></li>
+                     </ul>
+                  </div>
+                
+              </div>
+              
+            </div>
+            <p style={{ margin: 0 }}>Copyright © 2023</p>
+         </footer>
     </Container>
     
   )
