@@ -46,7 +46,7 @@ const HomePage = () => {
         <div className="row">
         <img src={btc2} alt="btc1" className="image"></img>
         <div className="content">
-            <h1>Trade with bitcoins</h1>
+            <h1>Trade with bitcoins Testing Host</h1>
             <p>This is your Service description. Use this space to describe what the service entails, benefits for users and any other important information.</p>
             <Button 
                    type="Trader-window"
