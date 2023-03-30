@@ -46,7 +46,8 @@ const HomePage = () => {
         <div className="row">
         <img src={btc2} alt="btc1" className="image"></img>
         <div className="content">
-            <h1>Trade with bitcoins Testing Host</h1>
+            <h1 className="font-bold">Trade with bitcoins Testing Host</h1>
+            <p className="text-[1.8rem]">THIS IS TESTING TAILWIND</p>
             <p>This is your Service description. Use this space to describe what the service entails, benefits for users and any other important information.</p>
             <Button 
                    type="Trader-window"
