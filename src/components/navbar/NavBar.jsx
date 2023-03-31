@@ -1,5 +1,5 @@
 import React from 'react'
-
+import MenuItem from './MenuItem'
 const NavBar = () => {
     let mainMenu = [
         {
@@ -7,21 +7,47 @@ const NavBar = () => {
             route: "/",
         },
         {
+            name: "About Us",
+            route: "/about-us"
+        },
+        {
+            name: "Trade",
+            subMenu: [
+                {
+                    name: "Sub Item",
+                    route: "/"
+                },
+                {
+                    name: "Sub Item 1",
+                    route: "/"
+                }
+            ]
+        },
+        {
             name: "Market",
-            route: "/market"
+            subMenu: [
+                {
+                    name: "Sub Item",
+                    route: "/"
+                },
+                {
+                    name: "Sub Item 1",
+                    route: "/"
+                }
+            ]
         },
         {
             name: "Loan",
-            route: "/loan"
+            route: "/loans"
         }
     ]
     return (
         <>
-            <ul className='flex flex-row items-center gap-3'>
+            <ul className='flex flex-row items-center gap-10'>
                 {
-                    mainMenu.map((menuItem) => (
-                        <li>{menuItem.name}</li>
-                    ))
+                    mainMenu.map((menuItem) => {
+                        return <MenuItem menuItem={menuItem} />
+                    })
                 }
             </ul>
         </>

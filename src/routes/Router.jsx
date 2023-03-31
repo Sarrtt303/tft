@@ -34,6 +34,10 @@ export const Router = createBrowserRouter([
                 path: '/feed',
                 element: <FeedPage />
             },
+            {
+                path: '/about-us',
+                element: <></>
+            }
         ]
     }
 ])
