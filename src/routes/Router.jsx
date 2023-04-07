@@ -4,7 +4,7 @@ import HomePage from '../pages/homePage/HomePage';
 import LoanPage from '../pages/LoanPage';
 import MarketPage from '../pages/MarketPage';
 import RegisterPage from '../pages/RegisterPage';
-import FeedPage from '../pages/FeedPage';
+import FeedPage from '../pages/feedPage/FeedPage';
 import LoginPage from '../pages/LoginPage';
 import { Layout } from '../components/layout/Layout';
 
@@ -17,6 +17,7 @@ export const Router = createBrowserRouter([
             {
                 path: '/market',
                 element: <MarketPage />,
+                
             },
             {
                 path: '/loans',
@@ -31,13 +32,14 @@ export const Router = createBrowserRouter([
                 element: <RegisterPage />
             },
             {
-                path: '/feed',
+                path: '/feedPage',
                 element: <FeedPage />
             },
             {
                 path: '/about-us',
                 element: <></>
-            }
+            },
+            
         ]
     }
 ])

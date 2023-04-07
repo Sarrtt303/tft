@@ -39,6 +39,10 @@ const NavBar = () => {
         {
             name: "Loan",
             route: "/loans"
+        },
+        {
+            name: "Feed",
+            route: "/feedPage"
         }
     ]
     return (

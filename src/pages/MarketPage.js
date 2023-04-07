@@ -1,6 +1,6 @@
 
 import TradingViewWidget from "../components/chartinglib";
-import "../pages/MarketPage.css";
+
 
 
 
